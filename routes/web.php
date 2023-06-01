@@ -14,27 +14,11 @@ use App\Http\Controllers\TeacherController;
 //use App\Http\Controllers\Str;
 
 
-
-
-
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 //logout
 Route::get('/logout','App\Http\Controllers\AdminController@logout');
 //student logout
 
 Route::get('/student_logout','App\Http\Controllers\AdminController@student_logout');
-
-
 
 
 Route::get('/', function () {
@@ -57,11 +41,6 @@ Route::get('/student_setting','App\Http\Controllers\AdminController@studentsetti
 
 Route::get('/student_profile','App\Http\Controllers\AllstudentsController@studentprofile');
 
-
-
-
-
-
 //students info
 Route::get('/addstudent','App\Http\Controllers\AddstudentsController@addstudent');
 Route::post('/save_student','App\Http\Controllers\AddstudentsController@savestudent');
@@ -71,9 +50,6 @@ Route::get('/student_edit/{student_id}','App\Http\Controllers\allstudentsControl
 Route::post('/update_student/{student_id}','App\Http\Controllers\allstudentsController@studentupdate');
 //student own update
 Route::post('/student_own_update','App\Http\Controllers\allstudentsController@studentownupdate');
-
-
-
 
 //all student part
 Route::get('/allstudent','App\Http\Controllers\AllstudentsController@allstudent');
